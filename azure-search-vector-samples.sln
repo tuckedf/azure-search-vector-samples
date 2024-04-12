@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo-dotnet", "demo-dotnet", "{C62212A0-389A-4064-8DC5-7F56E3834530}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetIntegratedVectorizationDemo", "demo-dotnet\DotNetIntegratedVectorizationDemo\DotNetIntegratedVectorizationDemo.csproj", "{2E0AD45C-7B09-434A-A097-1E88B176AE87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetVector", "demo-dotnet\DotNetVectorDemo\DotNetVector.csproj", "{F5006663-E11F-4966-971D-1DE2FA38D7E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E0AD45C-7B09-434A-A097-1E88B176AE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0AD45C-7B09-434A-A097-1E88B176AE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0AD45C-7B09-434A-A097-1E88B176AE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0AD45C-7B09-434A-A097-1E88B176AE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5006663-E11F-4966-971D-1DE2FA38D7E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5006663-E11F-4966-971D-1DE2FA38D7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5006663-E11F-4966-971D-1DE2FA38D7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5006663-E11F-4966-971D-1DE2FA38D7E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E0AD45C-7B09-434A-A097-1E88B176AE87} = {C62212A0-389A-4064-8DC5-7F56E3834530}
+		{F5006663-E11F-4966-971D-1DE2FA38D7E2} = {C62212A0-389A-4064-8DC5-7F56E3834530}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4E4D90F-F2A6-417F-8339-CFE2455229CB}
+	EndGlobalSection
+EndGlobal

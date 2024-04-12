@@ -1,0 +1,38 @@
+{
+    "@odata.context": "https://tuckbot-aisearch-dev.search.windows.net/$metadata#indexers/$entity",
+    "@odata.etag": "\"0x8DC3EDE13D4B457\"",
+    "name": "mba-indexer",
+    "description": null,
+    "dataSourceName": "tuckbotdev-canvas",
+    "skillsetName": "mba-index-dev3-skill-vectorizer",
+    "targetIndexName": "mba-index",
+    "disabled": null,
+    "schedule": null,
+    "parameters": {
+      "batchSize": null,
+      "maxFailedItems": null,
+      "maxFailedItemsPerBatch": null,
+      "base64EncodeKeys": null,
+      "configuration": {
+        "indexedFileNameExtensions": ".txt,.md,.html,.pdf,.docx,.pptx,.deltrack",
+        "excludedFileNameExtensions": ".mp4,.jpg",
+        "allowSkillsetToReadFileData": true,
+        "dataToExtract": "contentAndMetadata"
+      }
+    },
+    "fieldMappings": [
+      {
+        "sourceFieldName": "metadata_storage_path",
+        "targetFieldName": "url",
+        "mappingFunction": null
+      }
+    ],
+    "outputFieldMappings": [
+      {
+        "sourceFieldName": "/document/embedding/*",
+        "targetFieldName": "contentVector"
+      }
+    ],
+    "cache": null,
+    "encryptionKey": null
+  }

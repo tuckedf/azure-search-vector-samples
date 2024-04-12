@@ -9,7 +9,9 @@ from azure.search.documents.indexes.models import (
     VectorSearchProfile,
     HnswVectorSearchAlgorithmConfiguration,
     AzureOpenAIEmbeddingSkill,
-    SplitSkill
+    SplitSkill,
+    FieldMapping,
+    SemanticConfiguration
 )
 # Required to use the preview SDK
 from azure.search.documents.indexes._generated.models import (
@@ -70,6 +72,135 @@ def create_search_index(index_name, azure_openai_endpoint, azure_openai_embeddin
                 searchable=True
             ),
             SearchField(
+                name="filepath",
+                type=SearchFieldDataType.String,
+                hidden=False,
+                filterable=False,
+                sortable=False,
+                facetable=False,
+                searchable=True
+            ),
+            SearchField(
+                name="course_id",
+                type=SearchFieldDataType.Int32,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+             SearchField(
+                name="course_name",
+                type=SearchFieldDataType.String,
+                hidden=False,
+                filterable=False,
+                sortable=False,
+                facetable=False,
+                searchable=True,
+                key=False
+            ),
+            SearchField(
+                name="course_code",
+                type=SearchFieldDataType.String,
+                hidden=False,
+                filterable=False,
+                sortable=False,
+                facetable=False,
+                searchable=True,
+                key=False
+            ),
+            SearchField(
+                name="include",
+                type=SearchFieldDataType.String,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+            SearchField(
+                name="status",
+                type=SearchFieldDataType.String,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+            SearchField(
+                name="url",
+                type=SearchFieldDataType.String,
+                hidden=False,
+                filterable=False,
+                sortable=False,
+                facetable=False,
+                searchable=True,
+                key=False
+            ),
+            SearchField(
+                name="file_id",
+                type=SearchFieldDataType.Int32,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+            SearchField(
+                name="folder_id",
+                type=SearchFieldDataType.Int32,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+            SearchField(
+                name="lock_at",
+                type=SearchFieldDataType.DateTimeOffset,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+            SearchField(
+                name="unlock_at",
+                type=SearchFieldDataType.DateTimeOffset,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+            SearchField(
+                name="priority",
+                type=SearchFieldDataType.DateTimeOffset,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+            SearchField(
+                name="isdeleted",
+                type=SearchFieldDataType.DateTimeOffset,
+                hidden=False,
+                filterable=True,
+                sortable=False,
+                facetable=False,
+                searchable=False,
+                key=False
+            ),
+                SearchField(
                 name="vector",
                 type=SearchFieldDataType.Collection(SearchFieldDataType.Single),
                 hidden=False,
@@ -81,6 +212,15 @@ def create_search_index(index_name, azure_openai_endpoint, azure_openai_embeddin
                 vector_search_profile="profile"
             )
         ],
+        # Define your semantic configuration
+        semantic_config = SemanticConfiguration(
+            name="default",
+            prioritized_fields={
+                "titleField": "title",
+                "prioritizedContentFields": ["chunk"],
+                "prioritizedKeywordsFields": []
+            }
+        ),
         vector_search=VectorSearch(
             profiles=[
                 VectorSearchProfile(
@@ -185,7 +325,51 @@ def create_search_skillset(
                         InputFieldMappingEntry(
                             name="title",
                             source="/document/metadata_storage_name"
-                        )
+                        ),
+                        InputFieldMappingEntry(
+                            name="filepath",
+                            source="/document/metadata_storage_name"
+                        ),
+                        InputFieldMappingEntry(
+                            name="course_id",
+                            source="/document/course_id"
+                        ),
+                         InputFieldMappingEntry(
+                            name="course_code",
+                            source="/document/course_code"
+                        ),
+                        InputFieldMappingEntry(
+                            name="course_name",
+                            source="/document/course_name"
+                        ),
+                        InputFieldMappingEntry(
+                            name="include",
+                            source="/document/include"
+                        ),                        
+                        InputFieldMappingEntry(
+                            name="url",
+                            source="/document/url"
+                        ),      
+                        InputFieldMappingEntry(
+                            name="file_id",
+                            source="/document/file_id"
+                        ),     
+                        InputFieldMappingEntry(
+                            name="folder_id",
+                            source="/document/folder_id"
+                        ),     
+                        InputFieldMappingEntry(
+                            name="lock_at",
+                            source="/document/lock_at"
+                        ),   
+                        InputFieldMappingEntry(
+                            name="unlock_at",
+                            source="/document/unlock_at"
+                        ),
+                        InputFieldMappingEntry(
+                            name="priority",
+                            source="/document/priority"
+                        ),   
                     ]
                 )
             ],

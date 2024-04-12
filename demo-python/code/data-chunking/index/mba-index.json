@@ -1,0 +1,348 @@
+{
+    "@odata.context": "https://tuckbot-aisearch-s1-dev.search.windows.net/$metadata#indexes/$entity",
+    "@odata.etag": "\"0x8DC479707584981\"",
+    "name": "mba-index",
+    "defaultScoringProfile": null,
+    "fields": [
+      {
+        "name": "chunk_id",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": true,
+        "facetable": false,
+        "key": true,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": "keyword",
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "parent_id",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": true,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "chunk",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": false,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "title",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": false,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "filepath",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": false,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "course_id",
+        "type": "Edm.Int32",
+        "searchable": false,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "course_name",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": false,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "course_code",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": false,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "include",
+        "type": "Edm.String",
+        "searchable": false,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "status",
+        "type": "Edm.String",
+        "searchable": false,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "url",
+        "type": "Edm.String",
+        "searchable": true,
+        "filterable": false,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "file_id",
+        "type": "Edm.Int32",
+        "searchable": false,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "folder_id",
+        "type": "Edm.Int32",
+        "searchable": false,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "lock_at",
+        "type": "Edm.DateTimeOffset",
+        "searchable": false,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "unlock_at",
+        "type": "Edm.DateTimeOffset",
+        "searchable": false,
+        "filterable": true,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": null,
+        "vectorSearchProfile": null,
+        "synonymMaps": []
+      },
+      {
+        "name": "vector",
+        "type": "Collection(Edm.Single)",
+        "searchable": true,
+        "filterable": false,
+        "retrievable": true,
+        "sortable": false,
+        "facetable": false,
+        "key": false,
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "analyzer": null,
+        "normalizer": null,
+        "dimensions": 1536,
+        "vectorSearchProfile": "profile",
+        "synonymMaps": []
+      }
+    ],
+    "scoringProfiles": [],
+    "corsOptions": null,
+    "suggesters": [],
+    "analyzers": [],
+    "normalizers": [],
+    "tokenizers": [],
+    "tokenFilters": [],
+    "charFilters": [],
+    "encryptionKey": null,
+    "similarity": {
+      "@odata.type": "#Microsoft.Azure.Search.BM25Similarity",
+      "k1": null,
+      "b": null
+    },
+    "semantic": {
+      "defaultConfiguration": null,
+      "configurations": [
+        {
+          "name": "default",
+          "prioritizedFields": {
+            "titleField": {
+              "fieldName": "title"
+            },
+            "prioritizedContentFields": [
+              {
+                "fieldName": "chunk"
+              }
+            ],
+            "prioritizedKeywordsFields": []
+          }
+        }
+      ]
+    },
+    "vectorSearch": {
+      "algorithms": [
+        {
+          "name": "hnsw-algorithm",
+          "kind": "hnsw",
+          "hnswParameters": {
+            "metric": "cosine",
+            "m": 4,
+            "efConstruction": 400,
+            "efSearch": 500
+          },
+          "exhaustiveKnnParameters": null
+        }
+      ],
+      "profiles": [
+        {
+          "name": "profile",
+          "algorithm": "hnsw-algorithm",
+          "vectorizer": "azure-openai-vectorizer"
+        }
+      ],
+      "vectorizers": [
+        {
+          "name": "azure-openai-vectorizer",
+          "kind": "azureOpenAI",
+          "azureOpenAIParameters": {
+            "resourceUri": "https://tuckbot-aoai-dev.openai.azure.com",
+            "deploymentId": "embeddingmodel",
+            "apiKey": "b34583092beb4c74ba45c103aca6b09a",
+            "authIdentity": null
+          },
+          "customWebApiParameters": null
+        }
+      ]
+    }
+  }

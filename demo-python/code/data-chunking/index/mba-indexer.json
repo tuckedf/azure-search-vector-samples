@@ -1,0 +1,20 @@
+{
+    "@odata.context": "https://tuckbot-aisearch-s1-dev.search.windows.net/$metadata#indexers/$entity",
+    "@odata.etag": "\"0x8DC47964749731F\"",
+    "name": "mba-indexer",
+    "description": null,
+    "dataSourceName": "tuckbotstdev",
+    "skillsetName": "mba-index-skillset",
+    "targetIndexName": "mba-index",
+    "disabled": false,
+    "schedule": null,
+    "parameters": {
+      "batchSize": null,
+      "maxFailedItems": null,
+      "maxFailedItemsPerBatch": null
+    },
+    "fieldMappings": [],
+    "outputFieldMappings": [],
+    "cache": null,
+    "encryptionKey": null
+  }

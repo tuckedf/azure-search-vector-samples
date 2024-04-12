@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../azure-sdk-for-js/sdk/openai/openai/samples/v1-beta/javascript/searchindex"
+		}
+	],
+	"settings": {}
+}
